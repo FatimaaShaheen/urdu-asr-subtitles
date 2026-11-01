@@ -8,3 +8,4 @@ streamlit run frontend/app.py
 
 ## Status
 - [x] Step 1: Setup
+- [x] Step 2: Audio basics

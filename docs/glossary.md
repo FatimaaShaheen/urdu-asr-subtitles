@@ -12,3 +12,10 @@
 | Backend | Jo parde ke peeche kaam karta hai | FastAPI |
 | API | Frontend aur backend ke baat karne ka tareeqa | /health, /transcribe |
 | Database | Data ko sanbhal kar rakhne ki jagah | SQLite (Step 9) |
+| Waveform | Awaaz ka waqt vs shiddat graph | Notebook 01 |
+| Sampling rate | Ek second mein kitne samples (Whisper: 16kHz) | audio_utils.py |
+| Spectrogram | Waqt vs frequency ki tasveer | Notebook 01 |
+| Mel scale | Insani kaan ke mutabiq frequency scale | mel_spectrogram() |
+| Mel-spectrogram | Whisper ka input (80 x frames) | mel_spectrogram() |
+| MFCC | Mel-spectrogram ka compressed form | get_mfcc() |
+| Resampling | Sampling rate badalna | load_audio() |
