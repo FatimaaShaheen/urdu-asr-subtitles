@@ -1,6 +1,6 @@
 venv/
-data/
-models/
+/data/
+/models/
 *.wav
 *.mp3
 *.pt

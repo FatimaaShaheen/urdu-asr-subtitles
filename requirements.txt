@@ -8,3 +8,4 @@ matplotlib
 librosa
 soundfile
 jupyter
+python-multipart
