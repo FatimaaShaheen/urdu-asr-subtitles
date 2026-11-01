@@ -1,0 +1,11 @@
+venv/
+data/
+models/
+*.wav
+*.mp3
+*.pt
+*.safetensors
+__pycache__/
+.ipynb_checkpoints/
+.env
+*.db
