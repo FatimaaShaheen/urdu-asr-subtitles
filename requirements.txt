@@ -9,3 +9,5 @@ librosa
 soundfile
 jupyter
 python-multipart
+pytest
+jiwer
