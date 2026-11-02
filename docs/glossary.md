@@ -1,26 +1,5 @@
 # Glossary
 
-| Term | Mere alfaaz mein | Project mein kahan |
-|---|---|---|
-| ASR | Awaaz ko text mein badalna | Poora project |
-| NLP | Computer ka insani zabaan samajhna | Urdu text cleaning, tokenization |
-| ML | Data se computer ka khud seekhna | Model training |
-| DL | ML jis mein bohat layers wala neural network ho | Whisper model |
-| Dataset | Examples ka collection (audio + text) | FLEURS, Common Voice |
-| Pipeline | Steps ki chain: audio, model, text, subtitle | Poora system |
-| Frontend | Jo user dekhta hai | Streamlit app |
-| Backend | Jo parde ke peeche kaam karta hai | FastAPI |
-| API | Frontend aur backend ke baat karne ka tareeqa | /health, /transcribe |
-| Database | Data ko sanbhal kar rakhne ki jagah | SQLite (Step 9) |
-| Waveform | Awaaz ka waqt vs shiddat graph | Notebook 01 |
-| Sampling rate | Ek second mein kitne samples (Whisper: 16kHz) | audio_utils.py |
-| Spectrogram | Waqt vs frequency ki tasveer | Notebook 01 |
-| Mel scale | Insani kaan ke mutabiq frequency scale | mel_spectrogram() |
-| Mel-spectrogram | Whisper ka input (80 x frames) | mel_spectrogram() |
-| MFCC | Mel-spectrogram ka compressed form | get_mfcc() |
-| Resampling | Sampling rate badalna | load_audio() |
-# Glossary
-
 Har term: apne alfaaz mein matlab, aur project mein kahan aayi.
 
 ## Bunyadi
@@ -75,7 +54,9 @@ Har term: apne alfaaz mein matlab, aur project mein kahan aayi.
 | Baseline | Shuru ka score, jis se baad mein behtari naapte hain | Notebook 03 |
 | Reference | Sahi (asal) text | Test transcription |
 | Hypothesis | Model ka likha hua text | Whisper ka output |
-| WER | (badle + hataye + barhaye alfaaz) / asal alfaaz | metrics.py |
+| WER | (badle + hataye + barhaye alfaaz) / asal alfaaz, kam behtar | metrics.py |
 | CER | WER jaisa, lekin characters par | metrics.py |
-| Normalization | Dono texts ko ek jaisa banana (punctuation, diacritics hataana) | normalize_urdu() |
+| Normalization | Dono texts ko ek jaisa banana taake sirf asal ghaltiyan gini jayen | normalize_urdu() |
 | Diacritics | Zer, zabar, pesh jaise nishaan | normalize_urdu() |
+| Model size (base/small) | Model ke parameters ki tadaad; bara = behtar lekin slow | Notebook 03 |
+| Accuracy vs speed | Behtar score ke liye zyada waqt lagta hai | base 117s, small 280s |

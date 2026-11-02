@@ -20,6 +20,8 @@ Google FLEURS (Urdu, `ur_pk`)
 | Validation | 267 | 0.76 |
 | Test | 299 | 0.81 |
 
+Note: Hugging Face `datasets` ka version 4 purani loading scripts support nahi karta, is liye project mein `datasets<4` use hota hai.
+
 ## Folder structure
 
 ```
@@ -55,7 +57,7 @@ Colab: har notebook ke pehle cell mein repo clone/pull hota hai.
 - [x] Step 1: Setup, GitHub, backend + frontend skeleton
 - [x] Step 2: Audio basics (waveform, mel-spectrogram, MFCC)
 - [x] Step 3: Dataset load aur exploration (FLEURS Urdu)
-- [ ] Step 4: Whisper baseline aur WER
+- [x] Step 4: Whisper baseline aur WER
 - [ ] Step 5: Urdu text cleaning aur tokenization
 - [ ] Step 6: Extra datasets
 - [ ] Step 7: Augmentation + LoRA fine-tuning
@@ -66,8 +68,16 @@ Colab: har notebook ke pehle cell mein repo clone/pull hota hai.
 
 ## Results
 
+FLEURS Urdu test set (299 jumle). Scoring `normalize_urdu` (metrics.py, version 1) se hui.
+
 | Model | WER | CER | Note |
 |---|---|---|---|
-| whisper-base (baseline) | - | - | Step 4 ke baad |
-| whisper-small (baseline) | - | - | Step 4 ke baad |
+| whisper-base (baseline) | 0.5155 | 0.2153 | Step 4, 117 sec |
+| whisper-small (baseline) | 0.3672 | 0.1373 | Step 4, 280 sec |
 | whisper-small (fine-tuned) | - | - | Step 7 ke baad |
+
+### Step 4 se nateeje
+
+- `small` ne `base` se WER taqriban 15 points kam kiya, lekin taqriban 2.4 guna slow hai (accuracy vs speed).
+- Ghaltiyon ki qismein: milti julti awaaz wali spelling ghalat, naam aur ghair-zabaan alfaaz (جیسے "اتاوا کناڈا"), lafz ki hadd, adad ka format (`70` vs ستر), aur likhne ke jaiz alag tareeqe (کئے/کیے) jo scorer ne ghalat gine.
+- Aakhri qism Step 5 (text normalization) mein theek hogi, is liye Step 5 ke baad baseline dobara naapa jayega.
