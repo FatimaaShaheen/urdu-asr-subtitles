@@ -56,7 +56,23 @@ Har term: apne alfaaz mein matlab, aur project mein kahan aayi.
 | Hypothesis | Model ka likha hua text | Whisper ka output |
 | WER | (badle + hataye + barhaye alfaaz) / asal alfaaz, kam behtar | metrics.py |
 | CER | WER jaisa, lekin characters par | metrics.py |
-| Normalization | Dono texts ko ek jaisa banana taake sirf asal ghaltiyan gini jayen | normalize_urdu() |
-| Diacritics | Zer, zabar, pesh jaise nishaan | normalize_urdu() |
+| Diacritics | Zer, zabar, pesh jaise nishaan | clean_text.py |
 | Model size (base/small) | Model ke parameters ki tadaad; bara = behtar lekin slow | Notebook 03 |
 | Accuracy vs speed | Behtar score ke liye zyada waqt lagta hai | base 117s, small 280s |
+
+## Text aur Tokenization (Step 5)
+
+| Term | Mere alfaaz mein | Project mein kahan |
+|---|---|---|
+| Text normalization | Ek hi cheez ke alag likhne ke tareeqon ko ek bana dena | normalize_for_wer() |
+| Unicode | Har harf ko ek number dene ka international nizam | Urdu characters |
+| NFC | Unicode ki standard shakal, harf aur nishan ek saath jurte hain | basic_clean() |
+| Zero-width character | Chhupa hua character jo nazar nahi aata | basic_clean() |
+| Tatweel | Harf ko kheenchne wala nishan (ـ) | basic_clean() |
+| Spelling variants | Ek lafz ke jaiz alag tareeqe (کئے / کیے) | SPELLING dictionary |
+| Token | Text ka chhota tukra jo model samajhta hai | Notebook 04 |
+| Tokenization | Text ko tokens mein todna | WhisperTokenizer |
+| BPE | Aksar saath aane wale hisson ko jor kar token banana | Whisper ka tokenizer |
+| Special tokens | Khaas ishare (zabaan, kaam, shuru, khatam) | <\|ur\|>, <\|transcribe\|> |
+| Tokens per lafz | Ek lafz kitne tokens leta hai (Urdu ~2.7, English ~1.0) | Notebook 04 |
+| Unit test | Chhota code jo check kare ke function sahi chalta hai | tests/ |
