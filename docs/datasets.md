@@ -41,3 +41,4 @@ Haq, A. N. et al. (2026). UrduSpeech: A 156-Hour Urdu Speech Corpus with
 ## Faisle
 - FLEURS test aur UrduSpeech benchmark kabhi training mein shamil nahi
 - Text normalization: clean_text.normalize_for_wer (train aur evaluation dono mein ek hi)
+Training augmentation: gain (-6 se +6 dB), speed (0.9 se 1.1), noise (SNR 10 se 30 dB), SpecAugment. Sirf train par.

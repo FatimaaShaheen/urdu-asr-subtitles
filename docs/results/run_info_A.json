@@ -1,0 +1,46 @@
+{
+ "experiment": "A",
+ "trainable_params": 12976128,
+ "all_params": 254711040,
+ "seconds": 1670,
+ "n_train": 2103,
+ "n_val": 100,
+ "hours": 6.98,
+ "smoke": false,
+ "config": {
+  "model_name": "openai/whisper-small",
+  "language": "urdu",
+  "task": "transcribe",
+  "seed": 42,
+  "lora": {
+   "r": 32,
+   "alpha": 64,
+   "dropout": 0.05,
+   "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "out_proj",
+    "fc1",
+    "fc2"
+   ]
+  },
+  "train": {
+   "max_steps": 600,
+   "per_device_batch_size": 8,
+   "grad_accum": 2,
+   "learning_rate": 0.0005,
+   "warmup_steps": 50,
+   "eval_steps": 200,
+   "save_steps": 200,
+   "logging_steps": 25,
+   "max_label_len": 448
+  },
+  "augment": {
+   "p": 0.5,
+   "speed": true,
+   "noise": true,
+   "gain": true
+  }
+ }
+}

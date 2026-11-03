@@ -93,3 +93,25 @@ Har term: apne alfaaz mein matlab, aur project mein kahan aayi.
 | Attribution | CC-BY license mein dataset ke authors ka naam dena | README, datasets.md |
 | Data card | Dataset ke source, license aur masle likhne ki file | docs/datasets.md |
 | Embedding (audio ko dataset ke andar rakhna) | Audio bytes ko dataset ki file mein hi mehfooz karna taake raasta khone par bhi chale | embed_audio() |
+
+## Training (Step 7)
+
+| Term | Mere alfaaz mein | Project mein kahan |
+|---|---|---|
+| Fine-tuning | Pehle se trained model ko apne data par thora aur seekhana | lora_whisper.py |
+| LoRA | Poora model nahi badalte, chhote adapters jor kar sirf unhein train karte hain | LoraConfig, 5% parameters |
+| Rank (r) | Adapter kitna bara hai | r = 32 |
+| Epoch | Poore training data ka ek chakkar | A ~4.6, B ~2.5 |
+| Batch size | Ek baar mein kitne examples | 8 |
+| Gradient accumulation | Chhote batches ke gradients jama karke ek bara step lena | 2, yani effective batch 16 |
+| Learning rate | Har step mein model kitna badle | 0.0005 |
+| Warmup | Shuru mein learning rate dheere dheere barhana | 50 steps |
+| Loss | Model ki ghalti ka number (kam behtar) | Train/val loss |
+| Optimizer (AdamW) | Weights update karne ka tareeqa | Trainer ka default |
+| fp16 / mixed precision | Aadhe-size numbers se tez aur kam memory | fp16=True |
+| Checkpoint | Training ke beech mein save kiya hua model | save_steps |
+| Overfitting | Training data yaad kar lena, naye data par kharab hona | A ka val loss barha |
+| Data augmentation | Audio ko thora badal kar data barhana | augment.py |
+| SNR | Awaaz aur shor ka nisbat (kam = zyada shor) | add_noise() |
+| SpecAugment | Spectrogram ke tukron ko chhupa dena | apply_spec_augment |
+| Adapter | LoRA ke chhote trained weights (chhoti file) | runs/A/adapter |
