@@ -11,3 +11,4 @@ jupyter
 python-multipart
 pytest
 jiwer
+pyyaml
