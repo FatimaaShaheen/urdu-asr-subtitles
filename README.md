@@ -118,3 +118,11 @@ Trainable parameters: 12.98M (5.09% of 254.7M). Training time: A 1670 sec, B 170
 - A mein overfitting: training loss 0.41 se 0.15 gira, validation loss 0.92 se 0.94 barha. B mein validation loss lagataar gira (0.758 se 0.678).
 - Validation WER A mein bohat uchhalta raha (0.42, 0.58, 0.44), kyunke validation sirf 100 clips ka hai.
 - B ka validation set mein faida expected hai (validation mein UrduSpeech clips hain). FLEURS test par asal farq Step 8 mein.
+
+### Final evaluation (Step 8)
+
+| Model | FLEURS test WER | FLEURS test CER | UrduSpeech benchmark WER | Benchmark CER |
+|---|---|---|---|---|
+| whisper-small (baseline) | X.XXXX | X.XXXX | X.XXXX | X.XXXX |
+| A: LoRA, FLEURS only | X.XXXX | X.XXXX | X.XXXX | X.XXXX |
+| B: LoRA, FLEURS + UrduSpeech | X.XXXX | X.XXXX | X.XXXX | X.XXXX |

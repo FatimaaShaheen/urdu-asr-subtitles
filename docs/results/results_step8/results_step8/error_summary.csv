@@ -1,0 +1,7 @@
+﻿model,set,wer,hits,substitutions,deletions,insertions,digit_words,digit_wrong,hallucination_suspects
+baseline,fleurs_test,0.4078,5453,2677,322,448,87,68,2
+baseline,urduspeech_bench,0.4435,3687,1614,676,361,2,2,3
+A_fleurs_only,fleurs_test,0.2734,6394,1861,197,253,87,68,0
+A_fleurs_only,urduspeech_bench,0.4665,3722,1733,522,533,2,2,3
+B_fleurs_urduspeech,fleurs_test,0.2883,6339,1929,184,324,87,71,0
+B_fleurs_urduspeech,urduspeech_bench,0.3271,4326,1410,241,304,2,2,0

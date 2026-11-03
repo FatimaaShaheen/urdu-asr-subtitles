@@ -115,3 +115,4 @@ Har term: apne alfaaz mein matlab, aur project mein kahan aayi.
 | SNR | Awaaz aur shor ka nisbat (kam = zyada shor) | add_noise() |
 | SpecAugment | Spectrogram ke tukron ko chhupa dena | apply_spec_augment |
 | Adapter | LoRA ke chhote trained weights (chhoti file) | runs/A/adapter |
+- [x] Step 8: Evaluation aur error analysis

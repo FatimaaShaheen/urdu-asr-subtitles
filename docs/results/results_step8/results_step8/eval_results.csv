@@ -1,0 +1,7 @@
+﻿model,set,n,wer,cer
+baseline,fleurs_test,299,0.4078,0.1673
+baseline,urduspeech_bench,400,0.4435,0.2594
+A_fleurs_only,fleurs_test,299,0.2734,0.1016
+A_fleurs_only,urduspeech_bench,400,0.4665,0.2617
+B_fleurs_urduspeech,fleurs_test,299,0.2883,0.1091
+B_fleurs_urduspeech,urduspeech_bench,400,0.3271,0.1622
